@@ -2,7 +2,7 @@
   <div class="container mt-2">
     <b-card
     >
-    Name:{{ $route.params.country }}
+    Name: {{ country.name.common }}
     </b-card>
   </div>
 </template>
@@ -11,11 +11,16 @@
 import axios from 'axios'
 export default {
   name: 'Country',
+  data() {
+    return {
+      country: {}
+    }
+  },
   mounted(){
      axios.get(`https://restcountries.com/v3.1/name/${this.$route.params.country}?fullText=true`)
          .then(response => {
            console.log(response.data)
-           this.countries = response.data
+           this.country = response.data[0]
          })
          .catch(error => console.log(error))
   }

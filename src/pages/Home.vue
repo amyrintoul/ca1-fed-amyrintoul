@@ -66,10 +66,7 @@ export default {
    
      
 }
-.text-move{
- 
 
-}
 
 
 

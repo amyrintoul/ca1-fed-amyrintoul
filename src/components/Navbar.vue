@@ -12,7 +12,7 @@
       <b-navbar-nav>
         <router-link :to="{name: 'home'}" class="nav-link">Home</router-link> 
          <router-link :to="{name: 'all_countries'}" class="nav-link">Countries</router-link>
-         <router-link :to="{name: 'all_weathers'}" class="nav-link">Weather</router-link>
+         <router-link :to="{name: 'all_countries'}" class="nav-link">Weather</router-link>
          
       </b-navbar-nav>
 

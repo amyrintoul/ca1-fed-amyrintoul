@@ -66,10 +66,10 @@ export default {
           alert("Please enter a search term!")
             return
         }
-        axios.get( `${RESTCOUNTRY_URL}/name/${this.term} `)
+          axios.get( `${RESTCOUNTRY_URL}/name/${this.term} `)
              .then((response) => {
-                 console.log(response.data.data)
-                 this.countries = response.data.data
+                 console.log(response.data)
+                 this.countries = response.data
              })
              .catch(error => console.log(error))
 
